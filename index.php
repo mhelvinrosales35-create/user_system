@@ -3,7 +3,7 @@ session_start();
 include "config.php";
 
 if (isset($_POST['submit'])) {
-    $action = $_POST['action']; // login or register
+    $action = $_POST['action']; 
     $username = $_POST['username'];
     $password = $_POST['password'];
 
