@@ -8,7 +8,7 @@ if (isset($_POST['add'])) {
     $sql = "INSERT INTO records (name, details, date_created) VALUES ('$name', '$details', NOW())";
     if ($conn->query($sql)) {
         header("Location: dashboard.php");
-        exit(); // importante para tumigil agad
+        exit();
     } else {
         echo "Error: " . $conn->error;
     }
@@ -35,10 +35,7 @@ if (isset($_POST['add'])) {
     </div>
 </body>
 </html>
-✅ Fix 2 (gamitin prepared statement — mas safe)
-php
-Copy
-Edit
+
 <?php
 include "config.php";
 
